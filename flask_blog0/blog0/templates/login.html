@@ -1,0 +1,66 @@
+{% extends "mainpage.html" %}
+{% block body %}
+<div class="content-section">
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div class='col-sm-4 col-xs-12'>
+      <div class="panel panel-default">
+        <style>
+        .panel > .panel-heading {
+          background-image: none;
+          background-color: #2f3133;
+          color: white;
+
+}
+        </style>
+  <div class="panel-heading">Sign in</div>
+  <div class="panel-body">
+    {{ form.username.label }}
+    <br />
+    {% if form.username.errors %}
+       {{ form.username(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+              {% for error in form.username.errors %}
+                 <span>{{ error }}</span>
+              {% endfor %}
+          </div>
+    {% else %}
+      {{ form.username(class="form-control form-control-lg") }}
+      {% endif %}
+
+
+
+    <br />
+
+
+
+    {{ form.password.label(class="form-control-label") }}
+    {% if form.password.errors %}
+        {{ form.password(class="form-control form-control-lg is-invalid") }}
+        <div class="invalid-feedback">
+            {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    {% else %}
+        {{ form.password(class="form-control form-control-lg") }}
+    {% endif %}
+
+
+
+    <br />
+
+
+    {{ form.submit() }}
+
+    <br />
+
+    <small class="text-muted">
+        Don't Have An Account? <a class="ml-2" href="{{ url_for('register') }}">Signup</a>
+    </small>
+  </div>
+  </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

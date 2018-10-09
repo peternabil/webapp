@@ -1,0 +1,39 @@
+{% extends "mainpage.html" %}
+{% block body %}
+<div class='row'>
+
+  <div class='col-sm-3 col-xs-12'>
+    <div class="panel panel-primary">
+<div class="panel-heading">Already have an account?</div>
+<div class="panel-body">
+  <a href="/login" class = 'btn btn-primary'>Login</a>
+</div>
+</div>
+  </div>
+
+  <div class='col-sm-3 col-xs-6'>
+    <div class="panel panel-primary">
+<div class="panel-heading">Not registered yet?</div>
+<div class="panel-body">
+  <a href="/register" class = 'btn btn-primary'>Sign up</a>
+</div>
+</div>
+  </div>
+  <!-- <div class='col-sm-3 col-xs-6'>
+    <div class="panel panel-warning">
+<div class="panel-heading"></div>
+<div class="panel-body">
+  <a href="index.html" class = 'btn btn-primary'>Do This</a>
+</div>
+</div>
+  </div> -->
+</div>
+<style>
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #2f3133;
+  color: white;
+
+}
+</style>
+{% endblock %}
