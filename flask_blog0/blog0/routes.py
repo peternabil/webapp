@@ -55,8 +55,3 @@ def account():
     return render_template('account.html',title='Account')
 
 
-
-@app.route('/score')
-def score():
-    # paths = {"acmilan","ahly","ajax","arsenal","asmonaco","athelieticomadrid","barcelona","bayernmunich","brussiadortmund","brightonalbion","bournemouth","bunlry","chelsea","everton","fulham","huddersfield","intermilan","juventus","leicestercity","liverpool","mancity","manunited","napoli","newcastle","zamalek","pyramids","rcdespanyol","realmadrid","realsociedad","roma","tottenham","valencia","watford","westbromwich","westhamunited"}
-    return render_template('scoring.html')
